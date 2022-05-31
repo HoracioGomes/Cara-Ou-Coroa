@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1g-Dd-TCL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -12,16 +12,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cara_ou_coroa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-KR-eVR">
-                                <rect key="frame" x="46.5" y="223" width="321" height="154"/>
+                                <rect key="frame" x="46.5" y="179" width="321" height="154"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0o-zy-pv2">
-                                <rect key="frame" x="59.5" y="489" width="295" height="88"/>
+                                <rect key="frame" x="59.5" y="445" width="295" height="88"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="botao_jogar"/>
+                                <connections>
+                                    <segue destination="wbr-GH-d8h" kind="show" id="DZd-Ep-r6b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -33,14 +36,73 @@
                             <constraint firstItem="4mG-KR-eVR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZk-H4-QFb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mrU-UW-N2G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
+        </scene>
+        <!--Result Controller-->
+        <scene sceneID="2NL-Qh-yIo">
+            <objects>
+                <viewController id="wbr-GH-d8h" customClass="ResultController" customModule="cara_ou_coroa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4KJ-dl-5lS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moeda_cara" translatesAutoresizingMaskIntoConstraints="NO" id="Vii-Jn-cu3">
+                                <rect key="frame" x="54.5" y="269" width="305" height="304"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-O7-Y4b">
+                                <rect key="frame" x="71" y="625" width="272" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="botao_voltar"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="klm-tP-EGU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5hy-OQ-UqJ"/>
+                        <color key="backgroundColor" red="0.4708278179" green="0.73123413319999997" blue="0.56468516589999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Vii-Jn-cu3" firstAttribute="centerY" secondItem="4KJ-dl-5lS" secondAttribute="centerY" id="FCL-e8-mpp"/>
+                            <constraint firstItem="Vii-Jn-cu3" firstAttribute="centerX" secondItem="4KJ-dl-5lS" secondAttribute="centerX" id="VeI-HY-BWm"/>
+                            <constraint firstItem="8ab-O7-Y4b" firstAttribute="centerX" secondItem="4KJ-dl-5lS" secondAttribute="centerX" id="doG-Hs-wBG"/>
+                            <constraint firstItem="8ab-O7-Y4b" firstAttribute="top" secondItem="Vii-Jn-cu3" secondAttribute="bottom" constant="52" id="gSG-DG-dVe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jpl-rA-M78"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obj-Tv-trd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5cz-YO-RtL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y1g-Dd-TCL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUV-y1-vw4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3fu-lP-VeI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xH1-dK-Sba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="klm-tP-EGU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_jogar" width="271" height="74"/>
+        <image name="botao_voltar" width="248" height="66"/>
         <image name="logo" width="321" height="154"/>
+        <image name="moeda_cara" width="305" height="304"/>
     </resources>
 </document>
