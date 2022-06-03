@@ -12,18 +12,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cara_ou_coroa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-KR-eVR">
-                                <rect key="frame" x="46.5" y="179" width="321" height="154"/>
+                                <rect key="frame" x="46.5" y="223" width="321" height="154"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0o-zy-pv2">
-                                <rect key="frame" x="59.5" y="445" width="295" height="88"/>
+                                <rect key="frame" x="59.5" y="489" width="295" height="88"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="botao_jogar"/>
                                 <connections>
-                                    <segue destination="wbr-GH-d8h" kind="show" id="DZd-Ep-r6b"/>
+                                    <segue destination="wbr-GH-d8h" kind="show" identifier="segueJogar" id="DZd-Ep-r6b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,7 +58,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="botao_voltar"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="klm-tP-EGU"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="klm-tP-EGU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,6 +72,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jpl-rA-M78"/>
+                    <connections>
+                        <outlet property="moedaImage" destination="Vii-Jn-cu3" id="Slh-4x-CJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obj-Tv-trd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,6 +100,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="DZd-Ep-r6b"/>
         <segue reference="klm-tP-EGU"/>
     </inferredMetricsTieBreakers>
     <resources>
